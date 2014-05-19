@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />        
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/common.css')}}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/demo.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/icons.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/component.css')}}" />		
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/component_icon.css')}}" />		
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/default.css')}}" />
+		<script src="{{ asset('js/modernizr.custom.js')}}"></script>
+    </head>
+    <body>
+    <header>
+      <a href="#"></a>
+    </header>
+    <div id="main-container">
+			<!-- Push Wrapper -->
+			<div class="mp-pusher" id="mp-pusher">
+				<!-- mp-menu -->
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">
+						<h2 class="icon icon-world">Menu principal</h2>
+						<ul>						
+							<li><a class="icon icon-photo" href="#">Accueil</a></li>
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-display" href="#">Présentation</a>
+								<div class="mp-level">
+									<h2 class="icon icon-display">Présentation</h2>
+									<a class="mp-back" href="#">Retour</a>
+									<ul>
+										<li>
+											<a class="icon icon-phone" href="#">Histoire</a>											
+										</li>
+										<li>
+											<a class="icon icon-tv" href="#">Expériences</a>											
+										</li>
+										<li>
+											<a class="icon icon-camera" href="#">Compétences</a>											
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-news" href="#">Projets</a>
+								<div class="mp-level">
+									<h2 class="icon icon-news">Projets</h2>
+									<a class="mp-back" href="#">Retour</a>
+									<ul>
+										<li><a href="#">Projets réalisés</a></li>
+										<li><a href="#">Projets envisagés</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-shop" href="#">Réseaux sociaux</a>
+								<div class="mp-level">
+									<h2 class="icon icon-shop">Réseaux sociaux</h2>
+									<a class="mp-back" href="#">Retour</a>
+                                    <ul>
+										<li>
+											<a class="icon icon-phone" href="#">Linkdlin</a>											
+										</li>
+										<li>
+											<a class="icon icon-tv" href="#">Viadéo</a>											
+										</li>
+										<li>
+											<a class="icon icon-camera" href="#">Twitter</a>											
+										</li>
+										<li>
+											<a class="icon icon-camera" href="#">Facebook</a>											
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><a class="icon icon-photo" href="#">Contact</a></li>
+						</ul>							
+					</div>
+				</nav>				
+        		<p><a href="#" id="trigger" class="menu-trigger"><span>Accès Menu</span></a></p>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    <footer>
+      <div>
+      A propos
+      </div>
+      <div>
+      <div class="hi-icon-wrap hi-icon-effect-8">
+					<a href="#" class="hi-icon hi-icon-message">Contact</a>
+					<a href="#" class="hi-icon hi-icon-facebook">Facebook</a>
+					<a href="#" class="hi-icon hi-icon-twitter">Twitter</a>
+					<a href="#" class="hi-icon hi-icon-viadeo">Viadéo</a>
+					<a href="#" class="hi-icon hi-icon-linkedin">Linkdlin</a>
+	  </div>
+    </footer>
+            </div><!-- /pusher -->
+    </div>
+      <script src="{{ asset('js/classie.js')}}"></script>
+	  <script src="{{ asset('js/mlpushmenu.js')}}"></script>
+	  <script>
+	    new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+      </script>
+    </body>
+</html>

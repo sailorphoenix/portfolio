@@ -1,0 +1,7 @@
+parameters:
+#    portfolio_user.example.class: Portfolio\UserBundle\Example
+
+services:
+#    portfolio_user.example:
+#        class: %portfolio_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
