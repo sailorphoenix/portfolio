@@ -1,6 +1,12 @@
 /**BODY**/
 html {
 	font-size: 16px;
+	height: 100%;
+	background: #4C605D;
+}
+
+body {
+	background: #fff;
 }
 
 html, body, p, h1, h2, h3, h4, h5, h3, ul, li, ol, div {
@@ -29,6 +35,8 @@ header a{
 #mp-menu{
 	margin: 0 auto;
 	max-width: 980px;
+	box-shadow: 0 8px 12px #aaa;
+	margin-bottom: 12px;
 }
 
 h2.icon-world {
@@ -86,9 +94,12 @@ h2.icon-world {
 #main-content {
 	max-width: 980px;
 	margin: 0 auto;
+	min-height: 300px;	
+    border-right: 1px solid #34495E;
+    border-left: 1px solid #34495E;
 }
 #homepage {
-    background: #34495E;
+    padding: 20px;
 }
 
 /** FOOTER **/
@@ -97,6 +108,6 @@ footer {
 	/*bottom: 0;
     left: 67px;
     position: absolute;*/
-    background: #fff;
+    background: #4C605D;
     width: 100%;
 }
