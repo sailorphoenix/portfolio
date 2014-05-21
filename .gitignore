@@ -3,3 +3,4 @@ app/config/parameters.yml
 app/config/parameters.yml.dist
 app/cache/*
 app/logs/*
+.settings/*
