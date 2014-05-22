@@ -14,7 +14,6 @@
 	margin: 0 auto;
 	padding: 2em 0 3em;
 	width: 25%;
-	float: right;
 }
 
 .hi-icon {
@@ -695,7 +694,7 @@
 
 /* Effect 8 */
 .hi-icon-effect-8 .hi-icon {
-	background: rgba(255,255,255,0.1);
+	background: rgba(223, 223, 223, 0.5);
 	/*background: #34495E;*/
 	-webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
 	-moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
