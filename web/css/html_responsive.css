@@ -1,5 +1,66 @@
+@media screen and (max-width: 1016px) {
+
+}
+
 @media screen and (max-width: 800px) {
-  footer {
-    background: pink;
+  #mp-menu a.icon {
+    font-size:  0.875em;
+    line-height: 2.3;
+  }
+
+  .homepage-rubrique {
+    width: 28%;
+    margin-right: 5%;
+  }
+  
+  #a-propos,
+  #reseaux-sociaux,
+  #formulaire-contact {
+    display: inline-block;
+    width: 28%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .homepage-rubrique {
+    width: 45%;
+    margin-right: 5%;
+  }
+  .homepage-rubrique#homepage-travaux {
+    margin-right: 0;
+  }
+
+  .homepage-rubrique#homepage-cv {
+    width: 96%;
+    margin-top: 5%;
+  }
+  
+   #a-propos,
+  #reseaux-sociaux,
+  #formulaire-contact {
+    display: block;
+    width: 95%;
+  }
+  
+  #reseaux-sociaux {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .homepage-rubrique {
+    width: 100%;
+    display: block;
+    margin-right: 0;    
+    margin-top: 5%;
+  }
+  
+  .homepage-rubrique#homepage-actualite {
+    margin-top: 0;
+  }
+  
+  .homepage-rubrique#homepage-cv {
+    width: 100%;
+    margin-top: 5%;
   }
 }

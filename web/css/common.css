@@ -44,6 +44,10 @@ header a{
 	margin: 0 auto;
 	max-width: 980px;
 	box-shadow: 0 8px 12px #aaa;
+}
+
+#mp-pusher {
+	border-bottom: 1px solid #000;
 	margin-bottom: 12px;
 }
 
@@ -105,8 +109,7 @@ h2.icon-world {
 	max-width: 980px;
 	margin: 0 auto;
 	min-height: 300px;	
-    border-right: 1px solid #34495E;
-    border-left: 1px solid #34495E;
+    box-shadow: 0 100px 55px #aaa;
 }
 #homepage {
     padding: 20px;
@@ -151,4 +154,21 @@ footer h3 {
 #reseaux-sociaux {
 	border-right: 1px solid #000;
 	border-left: 1px solid #000;
+}
+
+/**HOMEPAGE**/
+
+.homepage-rubrique {
+	width: 31%;
+	display: inline-block;
+	border: 1px solid #000;
+	margin-right: 20px;
+	height: 350px;
+	background: #000;
+	opacity: 0.4;
+	color: #fff;
+}
+
+.homepage-rubrique#homepage-cv {
+	margin-right: 0;
 }
