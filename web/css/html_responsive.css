@@ -31,7 +31,7 @@ h2.icon-world {
     display: none;
 }
 
-#mp-pusher p span {
+#access-menu span {
 	display: none;
 }
 
@@ -93,6 +93,31 @@ h2.icon-world {
   
   #reseaux-sociaux {
     border: none;
+  }
+  
+  header a {
+    border-bottom: none;
+  }
+  
+  #access-menu {
+    display: inline-block;
+    width: 13%;
+    height: 100%;
+    vertical-align: top;
+    min-height: 300px;
+    background: #336CA6;
+  }
+  
+  .main-content {
+    display: inline-block;
+    width: 85%;
+  }
+    
+  .menu-trigger span {
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg);	
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    display: block;
   }
 }
 
