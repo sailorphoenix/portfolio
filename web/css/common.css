@@ -16,7 +16,7 @@ html, body, p, h1, h2, h3, h4, h5, h3, ul, li, ol, div {
 
 a {
 	text-decoration: none;
-	color: #000;
+	color: #F7F7F7;
 }
 
 h1, h2, h3 {
@@ -92,6 +92,10 @@ footer h3 {
 #reseaux-sociaux {
 	border-right: 1px solid #000;
 	border-left: 1px solid #000;
+}
+
+.hi-icon.hi-icon-facebook {
+	margin-left: 0;
 }
 
 /**HOMEPAGE**/
