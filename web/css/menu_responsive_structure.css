@@ -1,13 +1,10 @@
+@media screen and (max-width: 620px) {
 *,
 *:after,
 *::before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-html, body, .container, .scroller {
-	height: 100%;
 }
 
 .scroller {
@@ -22,7 +19,6 @@ html, body, .container, .scroller {
 .container {
 	position: relative;
 	overflow: hidden;
-	background: #34495e;
 }
 
 .menu-trigger {
@@ -289,4 +285,5 @@ html, body, .container, .scroller {
 .no-csstransforms3d .mp-menu > .mp-level,
 .no-js .mp-menu > .mp-level {
 	display: block;
+}
 }

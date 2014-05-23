@@ -9,6 +9,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/common.css')}}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/html_responsive.css')}}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/footer-icons.css')}}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/menu_responsive_structure.css')}}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/menu_css_responsive.css')}}" />
         <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700,500,900' rel='stylesheet' type='text/css'>
 		<script src="{{ asset('js/modernizr.custom.js')}}"></script>
     </head>
@@ -16,6 +18,7 @@
     <header>
       <a href="#"></a>
     </header>
+    <div class="container">
     <!-- Push Wrapper -->
 	  <div class="mp-pusher" id="mp-pusher">
 		<!-- mp-menu -->
@@ -79,8 +82,9 @@
 			</div>
 		</nav>				
         <p><a href="#" id="trigger" class="menu-trigger"><span>Accès Menu</span></a></p>
-      </div><!-- /pusher -->
-      <div id="main-content">	
+        <div class="scroller"><!-- this is for emulating position fixed of the nav -->
+            <div class="scroller-inner">
+             <div id="main-content">	
         {% block body %}{% endblock %}
       </div>
         {% block javascripts %}{% endblock %}
@@ -107,6 +111,11 @@
 	    </div>
 	  </div>
     </footer>
+            </div>
+        </div>
+      </div><!-- /pusher -->
+      
+     
     <script src="{{ asset('js/classie.js')}}"></script>
     <script src="{{ asset('js/mlpushmenu.js')}}"></script>
 	<script>

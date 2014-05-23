@@ -1,5 +1,54 @@
-@media screen and (max-width: 1016px) {
+@media screen and (min-width: 621px){
+	/** MENU **/
+.mp-level{
+	margin: 0 auto;
+	max-width: 980px;
+	box-shadow: 0 8px 12px #aaa;
+}
 
+#mp-menu {
+	border-bottom: 1px solid #000;
+	margin-bottom: 12px;
+}
+
+h2.icon-world {
+    display: none;
+}
+
+#mp-menu ul {
+    list-style-type: none;
+    height: 35px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.mp-back {
+   display: none;
+}
+
+.mp-back,
+.level-down > h2.icon,
+.level-down ul {
+    display: none;
+}
+
+#mp-pusher p span {
+	display: none;
+}
+
+#mp-menu .main-level {
+	width: 19%;
+	display: inline-block;
+	height: 35px;
+}
+
+#mp-menu a.icon {
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 35px;
+	line-height: 1.9;
+	text-transform: uppercase;
+}
 }
 
 @media screen and (max-width: 800px) {
@@ -35,7 +84,7 @@
     margin-top: 5%;
   }
   
-   #a-propos,
+  #a-propos,
   #reseaux-sociaux,
   #formulaire-contact {
     display: block;

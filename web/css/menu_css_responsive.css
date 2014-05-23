@@ -1,3 +1,4 @@
+@media screen and (max-width: 620px) {
 @font-face {
 	font-family: 'linecons';
 	src:url('../fonts/linecons/linecons.eot');
@@ -195,4 +196,5 @@
 }
 .icon-world:before {
 	content: "\e02f";
+}
 }
