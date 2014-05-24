@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/menu_css_responsive.css')}}" />
 {% endblock %}
 {% block scripts %}
-  <script src="{{ asset('js/modernizr.custom.js')}}"></script>
+  <script src="{{ asset('js/lib/modernizr.custom.js')}}"></script>
 {% endblock %}
 
 {% block menu %}
@@ -95,7 +95,7 @@
 	  </div>
 	  <div id="formulaire-contact">
 	    <h3>Formulaire de contact</h3>
-	      <form action="{{ path ('portfolio_portfolio_homepage') }}" method="post" {{ form_enctype(form) }}>
+	      <form id="footer-contact-form" action="{{ path ('portfolio_portfolio_homepage') }}" method="post" {{ form_enctype(form) }}>
         	{{ form_errors(form) }}
         	{{ form_widget(form) }}        	
         	{{ form_row(form.nom) }}
@@ -112,8 +112,8 @@
 {% endblock %}
 
 {% block javascripts %}
-  <script src="{{ asset('js/classie.js')}}"></script>
-  <script src="{{ asset('js/mlpushmenu.js')}}"></script>
+  <script src="{{ asset('js/lib/classie.js')}}"></script>
+  <script src="{{ asset('js/lib/mlpushmenu.js')}}"></script>
   <script>
       new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
   </script>
