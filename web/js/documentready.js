@@ -30,7 +30,8 @@ function heightMenuRWD (){
 }
 
 $(document).ready(function (){
-    heightMenuRWD();  
+    heightMenuRWD(); 
+    contactFormValidate();
 });
 
 $(window).resize(function () {

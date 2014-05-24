@@ -1,0 +1,38 @@
+# src/Portfolio/PortfolioBundle/Resources/config/validation.yml
+Portfolio\PortfolioBundle\Entity\Contact:
+ properties:
+  nom:
+    - Length:
+        min: 2
+        max: 10
+        minMessage: "Votre nom de famille doit contenir au moins {{ limit }} caractères"
+        maxMessage: "Votre nom de famille doit contenir au plus {{ limit }} caractères"
+    - Type: string
+    - Regex: "/^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,30})$/"
+  prenom:
+    - Length:
+        min: 2
+        max: 10
+        minMessage: "Votre prénom doit contenir au moins {{ limit }} caractères"
+        maxMessage: "Votre prénom doit contenir au plus {{ limit }} caractères"
+    - Regex: "/^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,30})$/"
+    - Type: string
+  mail:
+    - Email: 
+        message: "Votre mail est invalide"
+    - NotBlank: ~
+  objet:
+    - Length:
+       min: 2
+       max: 10
+       minMessage: "Votre objet doit contenir au moins {{ limit }} caractères"
+       maxMessage: "Votre objet doit contenir au plus {{ limit }} caractères"
+    - Type: string
+  message:
+    - Length:
+       min: 10
+       max: 100
+       minMessage: "Votre nom de famille doit contenir au moins {{ limit }} caractères"
+       maxMessage: "Votre nom de famille doit contenir au plus {{ limit }} caractères"
+    - Type: string
+ 
