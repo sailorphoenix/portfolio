@@ -71,6 +71,14 @@ h2.icon-world {
     display: inline-block;
     width: 28%;
   }
+  
+  .hi-icon {
+    margin: 15px 3%!important;
+  }
+  
+  .hi-icon.hi-icon-facebook {
+    margin-left: 0!important;
+  }
 }
 
 @media screen and (max-width: 620px) {
