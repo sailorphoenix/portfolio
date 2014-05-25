@@ -32,7 +32,7 @@ Portfolio\PortfolioBundle\Entity\Contact:
     - Length:
        min: 10
        max: 100
-       minMessage: "Votre nom de famille doit contenir au moins {{ limit }} caractères"
-       maxMessage: "Votre nom de famille doit contenir au plus {{ limit }} caractères"
+       minMessage: "Votre message doit contenir au moins {{ limit }} caractères"
+       maxMessage: "Votre message doit contenir au plus {{ limit }} caractères"
     - Type: string
  

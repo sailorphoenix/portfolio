@@ -15,65 +15,69 @@
   <nav id="mp-menu" class="mp-menu">
     <div class="mp-level">
       <h2 class="icon icon-world">Menu principal</h2>
-	  <ul>						
-		<li class="main-level"><a class="icon icon-photo" href="#">Accueil</a></li>
-		<li class="icon icon-arrow-left main-level">
-		  <a class="icon icon-display" href="#">Présentation</a>
-		  <div class="mp-level level-down">
-	    	<h2 class="icon icon-display">Présentation</h2>
-			<a class="mp-back" href="#">Retour</a>
-			<ul>
-			  <li>
-			    <a class="icon icon-phone" href="#">Histoire</a>											
-			  </li>
-			  <li>
-			    <a class="icon icon-tv" href="#">Expériences</a>											
-			  </li>
-			  <li>
-			    <a class="icon icon-camera" href="#">Compétences</a>											
-			  </li>
-		    </ul>
-		  </div>
-		</li>
-		<li class="icon icon-arrow-left main-level">
-		  <a class="icon icon-news" href="#">Projets</a>
-		  <div class="mp-level level-down">
-			<h2 class="icon icon-news">Projets</h2>
-			<a class="mp-back" href="#">Retour</a>
-			<ul>
-			  <li><a href="#">Projets réalisés</a></li>
-			  <li><a href="#">Projets envisagés</a></li>
-		    </ul>
-		  </div>
-		</li>
-		<li class="icon icon-arrow-left main-level">
-		  <a class="icon icon-shop" href="#">Réseaux</a>
-		  <div class="mp-level level-down">
-			<h2 class="icon icon-shop">Réseaux</h2>
-			<a class="mp-back" href="#">Retour</a>
+    <ul>            
+    <li class="main-level"><a class="icon icon-photo" href="#">Accueil</a></li>
+    <li class="icon icon-arrow-left main-level">
+      <a class="icon icon-display" href="#">Présentation</a>
+      <div class="mp-level level-down">
+        <h2 class="icon icon-display">Présentation</h2>
+      <a class="mp-back" href="#">Retour</a>
+      <ul>
+        <li>
+          <a class="icon icon-phone" href="#">Histoire</a>
+        </li>
+        <li>
+          <a class="icon icon-tv" href="#">Expériences</a>
+        </li>
+        <li>
+          <a class="icon icon-camera" href="#">Compétences</a>
+        </li>
+        </ul>
+      </div>
+    </li>
+    <li class="icon icon-arrow-left main-level">
+      <a class="icon icon-news" href="#">Projets</a>
+      <div class="mp-level level-down">
+      <h2 class="icon icon-news">Projets</h2>
+      <a class="mp-back" href="#">Retour</a>
+      <ul>
+        <li><a href="#">Projets réalisés</a></li>
+        <li><a href="#">Projets envisagés</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="icon icon-arrow-left main-level">
+      <a class="icon icon-shop" href="#">Réseaux</a>
+      <div class="mp-level level-down">
+      <h2 class="icon icon-shop">Réseaux</h2>
+      <a class="mp-back" href="#">Retour</a>
             <ul>
-			  <li>
-			    <a class="icon icon-phone" href="#">Linkdlin</a>											
-			  </li>
-			  <li>
-			    <a class="icon icon-tv" href="#">Viadéo</a>											
-			  </li>
-			  <li>
-			    <a class="icon icon-camera" href="#">Twitter</a>											
-			  </li>
-	          <li>
-			    <a class="icon icon-camera" href="#">Facebook</a>											
-			  </li>
-		    </ul>
-		  </div>
-		</li>
-	    <li  class="main-level"><a class="icon icon-photo" href="#">CV</a></li>
-	  </ul>							
-	</div>
+        <li>
+          <a class="icon icon-phone" href="#">Linkdlin</a>
+        </li>
+        <li>
+          <a class="icon icon-tv" href="#">Viadéo</a>
+        </li>
+        <li>
+          <a class="icon icon-camera" href="#">Twitter</a>
+        </li>
+            <li>
+          <a class="icon icon-camera" href="#">Facebook</a>
+        </li>
+        </ul>
+      </div>
+    </li>
+      <li  class="main-level"><a class="icon icon-photo" href="#">CV</a></li>
+    </ul>
+  </div>
   </nav>
 {% endblock %}
-
 {% block body %}
+  {% if asset(message) %}
+    <div id="message">
+      {{ message }}
+    </div>
+  {% endif %}
   {% block content %} {% endblock %}
 {% endblock %}
 
@@ -88,25 +92,25 @@
       </div>
       <div id="reseaux-sociaux" class="hi-icon-wrap hi-icon-effect-8">
         <h3>Coins réseaux</h3>
-		  <a href="#" class="hi-icon hi-icon-facebook">Facebook</a>
-		  <a href="#" class="hi-icon hi-icon-twitter">Twitter</a>
-		  <a href="#" class="hi-icon hi-icon-viadeo">Viadéo</a>
-		  <a href="#" class="hi-icon hi-icon-linkedin">Linkdlin</a>
-	  </div>
-	  <div id="formulaire-contact">
-	    <h3>Formulaire de contact</h3>
-	      <form id="footer-contact-form" action="{{ path ('portfolio_portfolio_homepage') }}" method="post" {{ form_enctype(form) }}>
-        	{{ form_errors(form) }}
-        	{{ form_widget(form) }}        	
-        	{{ form_row(form.nom) }}
-        	{{ form_row(form.prenom) }}
-        	{{ form_row(form.mail) }}
-        	{{ form_row(form.objet) }}
-        	{{ form_row(form.message) }}
-        	{{ form_rest(form) }}
-        	<input type="submit" value="Envoyer le message"/>        
+      <a href="#" class="hi-icon hi-icon-facebook">Facebook</a>
+      <a href="#" class="hi-icon hi-icon-twitter">Twitter</a>
+      <a href="#" class="hi-icon hi-icon-viadeo">Viadéo</a>
+      <a href="#" class="hi-icon hi-icon-linkedin">Linkdlin</a>
+    </div>
+    <div id="formulaire-contact">
+      <h3>Formulaire de contact</h3>
+        <form id="footer-contact-form" action="{{ path ('portfolio_portfolio_homepage') }}" method="post" {{ form_enctype(form) }}>
+          {{ form_errors(form) }}
+          {{ form_widget(form) }}
+          {{ form_row(form.nom) }}
+          {{ form_row(form.prenom) }}
+          {{ form_row(form.mail) }}
+          {{ form_row(form.objet) }}
+          {{ form_row(form.message) }}
+          {{ form_rest(form) }}
+          <input type="submit" value="Envoyer le message"/>
         </form>
-	  </div>
+    </div>
     </div>
   </footer>
 {% endblock %}

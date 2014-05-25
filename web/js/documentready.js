@@ -1,6 +1,6 @@
 function contactFormValidate(){
     $('#footer-contact-form').validate({
-        onsubmit: true,
+        onsubmit: false,
         onkeyup: true,
         rules : {
             'contact[nom]' : {
