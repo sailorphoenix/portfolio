@@ -12,17 +12,18 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class ContactType extends AbstractType
 {
-	public function buildForm(FormBuilderInterface $builder, array $options)
-	{
-		$builder->add('nom','text');
-		$builder->add('prenom','text');
-		$builder->add('mail','email');
-		$builder->add('objet','text');
-		$builder->add('message','textarea');
-	}
-	
-	public function getName()
-	{
-		return 'contact';
-	}
+  public function buildForm(FormBuilderInterface $builder, array $options)
+  {
+    $builder->add('nom','text');
+    $builder->add('prenom','text');
+    $builder->add('mail','email');
+    $builder->add('objet','text');
+    $builder->add('message','textarea');
+    $builder->add('captcha', 'captcha');
+  }
+  
+  public function getName()
+  {
+    return 'contact';
+  }
 }
