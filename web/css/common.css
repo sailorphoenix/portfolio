@@ -1,12 +1,12 @@
 /**BODY**/
 html {
-	font-size: 16px;
-	height: 100%;
-	background: #4C605D;
+    font-size: 16px;
+    height: 100%;
+    background: #4C605D;
 }
 
 body {
-	background: #fff;
+    background: #fff;
 }
 
 html, body, p, h1, h2, h3, h4, h5, h3, ul, li, ol, div {
@@ -15,20 +15,20 @@ html, body, p, h1, h2, h3, h4, h5, h3, ul, li, ol, div {
 }
 
 a {
-	text-decoration: none;
-	color: #F7F7F7;
+    text-decoration: none;
+    color: #F7F7F7;
 }
 
 h1, h2, h3 {
-	font-family: 'Orbitron',sans-serif;
+    font-family: 'Orbitron',sans-serif;
 }
 
 h3 {
-	font-size: 0.750em;
+    font-size: 0.750em;
 }
 
 .clear {
-	clear: both;
+    clear: both;
 }
 /**HEADER**/
 header {
@@ -44,9 +44,9 @@ header a{
 
 /** CONTENT **/
 #main-content {
-	max-width: 980px;
-	margin: 0 auto;
-	min-height: 300px;	
+    max-width: 980px;
+    margin: 0 auto;
+    min-height: 300px;    
     box-shadow: 0 100px 55px #aaa;
 }
 #homepage {
@@ -55,8 +55,8 @@ header a{
 
 /** FOOTER **/
 footer {
-	border-top: 2px solid #000;
-	/*bottom: 0;
+    border-top: 2px solid #000;
+    /*bottom: 0;
     left: 67px;
     position: absolute;*/
     background: #4C605D;
@@ -66,51 +66,90 @@ footer {
 }
 
 #footer-content {
-	max-width: 980px;
-	margin: 0 auto;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 #a-propos,
 #reseaux-sociaux,
 #formulaire-contact {
-	width: 30%;
-	display: inline-block;
-	padding: 10px;
-	vertical-align: top;
+    width: 30%;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
 }
 
 footer h3 {
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 #a-propos p,
 #reseaux-sociaux p,
 #formulaire-contact p {
-	font-size: 0.688em;
+    font-size: 0.688em;
 }
 
 #reseaux-sociaux {
-	border-right: 1px solid #000;
-	border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
 }
 
 .hi-icon.hi-icon-facebook {
-	margin-left: 0;
+    margin-left: 0;
 }
 
 /**HOMEPAGE**/
 
 .homepage-rubrique {
-	width: 31%;
-	display: inline-block;
-	border: 1px solid #000;
-	margin-right: 20px;
-	height: 350px;
-	background: #000;
-	opacity: 0.4;
-	color: #fff;
+    width: 31%;
+    display: inline-block;
+    border: 1px solid #000;
+    margin-right: 20px;
+    height: 350px;
+    background: #000;
+    opacity: 0.4;
+    color: #fff;
 }
 
 .homepage-rubrique#homepage-cv {
-	margin-right: 0;
+    margin-right: 0;
+}
+
+/**FORMULAIRE DE CONTACT**/
+footer #footer-contact-form label{
+    display: inline-block;
+    width: 50px;
+    vertical-align: top;
+    font-size: 0.688em;
+}
+
+footer #footer-contact-form div {
+    margin: 5px 0;
+}
+
+footer #footer-contact-form input[type=text],
+footer #footer-contact-form input[type=email]{
+    width: 140px;
+    height: 10px;
+}
+
+footer #footer-contact-form textarea {
+    width: 140px;
+}
+
+footer #footer-contact-form img {
+    height: auto;
+    width: 146px;
+}
+
+footer #footer-contact-form label[for=contact_captcha] {
+    visibility: hidden;
+}
+
+footer #footer-contact-form #contact_captcha {
+    margin-left: 50px;
+}
+
+footer #footer-contact-form input[type=submit] {
+    margin-left: 50px;
 }

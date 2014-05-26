@@ -68,3 +68,4 @@ swiftmailer:
 # Captcha Configuration
 gregwar_captcha:
     invalid_message: 'Le captcha saisi est invalide'
+    width: 146

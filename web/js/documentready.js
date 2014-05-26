@@ -4,7 +4,7 @@ function heightMenuRWD (){
 }
 
 function errorCaptcha (){
-    var next = $('label[for=contact_captcha]').next();
+    var next = $('footer label[for=contact_captcha]').next();
     var li = next.children('li');
     if (li.length) {
         smoothScroll.animateScroll( null, '#formulaire-contact' );
