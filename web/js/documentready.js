@@ -1,5 +1,6 @@
 function heightMenuRWD (){
     var height = $('#main-content').height();
+    // à tester
     $('#trigger').height(height + 1);
 }
 
