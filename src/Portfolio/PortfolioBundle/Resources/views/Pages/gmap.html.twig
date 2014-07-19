@@ -1,0 +1,30 @@
+{# src/Portfolio/PortfolioBundle/Resources/views/Pages/gmap.html.twig #}
+
+{% extends 'PortfolioPortfolioBundle::layout.html.twig' %}
+
+{% block title %}Gmap | Anais Hervouin Portfolio{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/footer-icons.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/menu_responsive_structure.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/gmap.css')}}" />
+{% endblock %}
+{% block scripts %}
+  <script src="{{ asset('js/lib/modernizr.custom.js')}}"></script>
+  <script src="{{ asset('js/lib/smooth-scroll.js')}}"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="{{ asset('js/lib/gmaps.js')}}"></script>
+  <script>
+    jQuery(document).ready( function () {
+        map_datas('{{ json }}');
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+<div id="col_gauche">
+  <div id="form_search"></div>
+  <div id="list_res"></div>
+</div>
+<div id="basic_map">
+</div>
+{% endblock %}

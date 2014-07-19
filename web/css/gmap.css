@@ -1,0 +1,38 @@
+#basic_map {
+    height: 500px;
+}
+
+#col_gauche {
+    z-index: 2;
+    position: absolute;
+    width: 200px;
+    margin-left: 10px;
+    background: #fff;
+    height: 500px;
+    padding: 10px;
+}
+
+#form_search {
+    height: 300px;
+}
+
+#list_res {
+    overflow-y: scroll;
+    max-height: 185px;
+}
+
+#num_res {
+    text-align: center;
+}
+
+.res {
+    height: 70px;
+}
+
+.res.open {
+    background: #b2beb5;
+}
+
+.title_res {
+    display: block;
+}

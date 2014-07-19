@@ -3,6 +3,7 @@
 namespace Portfolio\PortfolioBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Portfolio\PortfolioBundle\Entity\Geolocation;
 use Portfolio\PortfolioBundle\Entity\Contact;
 use Portfolio\PortfolioBundle\Form\Type\ContactType;
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -25,7 +26,27 @@ class PagesController extends Controller
       }
       return $this->render('PortfolioPortfolioBundle:Pages:index.html.twig', array('message' => $message, 'form' => $form->createView()));
     }
-    
+
+    public function gmapAction($longitude, $latitude)
+    {
+      $request = $this->getRequest();
+      $session = $request->getSession();
+      $message = '';
+      $res = $this->getDoctrine()->getRepository('PortfolioPortfolioBundle:Geolocation')
+        ->getAddresswithScale();
+
+      $json = array('recherche' => array('longitude' => $longitude, 'latitude' => $latitude),
+                    'resultat' => $res);
+
+      $json_encode = json_encode($json);
+      $form = $this->contactForm();
+      // récupère des messages
+      foreach ($session->getFlashBag()->get('message', array()) as $mess) {
+        $message = $mess;
+      }
+      return $this->render('PortfolioPortfolioBundle:Pages:gmap.html.twig', array('message' => $message, 'form' => $form->createView(), 'json' => $json_encode));
+    }
+
     public function contactForm() 
     {
       //Récupération des informations du formulaire

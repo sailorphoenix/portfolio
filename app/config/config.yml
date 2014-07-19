@@ -56,6 +56,12 @@ doctrine:
     orm:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
+        dql:
+            string_functions:
+               acos: Portfolio\PortfolioBundle\DQL\MySQL\Acos
+               cos: Portfolio\PortfolioBundle\DQL\MySQL\Cos
+               sin: Portfolio\PortfolioBundle\DQL\MySQL\Sin
+               radians: Portfolio\PortfolioBundle\DQL\MySQL\Radians
 
 # Swiftmailer Configuration
 swiftmailer:
