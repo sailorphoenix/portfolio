@@ -117,8 +117,12 @@ function listRes(map, json) {
 $(document).ready(function (){
     heightMenuRWD();
     smoothScroll.init();
-    errorCaptcha();
+    //errorCaptcha();
     geolocalisation();
+    $("input#searchtown_search").geocomplete().bind("geocode:result", function(event, result){
+        console.log(result.geometry.location.k);
+        $('#search-form').attr('action', '/portfolio/web/app_dev.php/result/' + result.geometry.location.B + '/' + result.geometry.location.k);
+    });
 });
 
 $(window).resize(function () {

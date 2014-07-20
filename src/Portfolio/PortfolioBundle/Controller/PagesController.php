@@ -5,7 +5,11 @@ namespace Portfolio\PortfolioBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Portfolio\PortfolioBundle\Entity\Geolocation;
 use Portfolio\PortfolioBundle\Entity\Contact;
+use Portfolio\PortfolioBundle\Entity\Search;
+use Portfolio\PortfolioBundle\Entity\FiltreSearch;
 use Portfolio\PortfolioBundle\Form\Type\ContactType;
+use Portfolio\PortfolioBundle\Form\Type\SearchTownType;
+use Portfolio\PortfolioBundle\Form\Type\FiltreSearchType;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 use Symfony\Component\BrowserKit\Request;
@@ -33,18 +37,19 @@ class PagesController extends Controller
       $session = $request->getSession();
       $message = '';
       $res = $this->getDoctrine()->getRepository('PortfolioPortfolioBundle:Geolocation')
-        ->getAddresswithScale();
+        ->getAddresswithScale($longitude, $latitude);
 
       $json = array('recherche' => array('longitude' => $longitude, 'latitude' => $latitude),
                     'resultat' => $res);
 
       $json_encode = json_encode($json);
       $form = $this->contactForm();
+      $search = $this->searchtownForm();
       // récupère des messages
       foreach ($session->getFlashBag()->get('message', array()) as $mess) {
         $message = $mess;
       }
-      return $this->render('PortfolioPortfolioBundle:Pages:gmap.html.twig', array('message' => $message, 'form' => $form->createView(), 'json' => $json_encode));
+      return $this->render('PortfolioPortfolioBundle:Pages:gmap.html.twig', array('message' => $message, 'form' => $form->createView(), 'search' => $search->createView(), 'json' => $json_encode));
     }
 
     public function contactForm() 
@@ -68,7 +73,21 @@ class PagesController extends Controller
       }
       return $form;
     }
-    
+
+    public function searchtownForm()
+    {
+    	//Récupération des informations du formulaire
+    	$request = $this->getRequest();
+    	$search = new Search();
+    	//Création du formulaire
+    	$form = $this->createForm(new SearchTownType(), $search);
+    	//Après l'envoi du formulaire on associe les informations du request avec les attributs de contact
+    	if('POST' == $request->getMethod()){
+    		$form->bind($request);
+    	}
+    	return $form;
+    }
+
     /**
      * Fonction qui permet d'envoyer un mail avec SwiftMailer de Symfony2
      * @param Contact $contact variable qui contient toutes les informations contenues dans le formulaire
