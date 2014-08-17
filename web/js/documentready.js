@@ -1,9 +1,3 @@
-function heightMenuRWD (){
-    var height = $('#mp-pusher').height();
-    // à tester
-    $('#access-menu').height(height);
-}
-
 function errorCaptcha (){
     var next = $('footer label[for=contact_captcha]').next();
     var li = next.children('li');
@@ -115,7 +109,6 @@ function listRes(map, json) {
 }
 
 $(document).ready(function (){
-    heightMenuRWD();
     smoothScroll.init();
     //errorCaptcha();
     //geolocalisation();
@@ -123,8 +116,41 @@ $(document).ready(function (){
         console.log(result.geometry.location.k);
         $('#search-form').attr('action', '/portfolio/web/app_dev.php/result/' + result.geometry.location.B + '/' + result.geometry.location.k);
     });*/
-});
+    $('.no-touch #main_naviguation').mouseover(function () {
+        $('#main_naviguation ul').show();
+        $('#main_naviguation span').hide();
+        $('#main_naviguation').css('background', 'highlight');
+    });
 
-$(window).resize(function () {
-    heightMenuRWD();
+    $('.no-touch #main_naviguation li').mouseover(function () {
+        $(this).animate({
+            width: "175px"
+        }, 1000);
+    });
+
+    $('.no-touch #main_naviguation li').mouseout(function () {
+        $(this).animate({
+            width: "80px"
+        }, 1000);
+    });
+
+    $('.no-touch #main_naviguation').mouseout(function () {
+        $('#main_naviguation ul').hide();
+        $('#main_naviguation span').show();
+        $('#main_naviguation').css('background', '');
+    });
+
+    $('.touch #main_naviguation').click(function () {
+        if ($('#main_naviguation').hasClass('touched')) {
+            $('#main_naviguation ul').hide();
+            $('#main_naviguation span').show();
+            $('#main_naviguation').css('background', '');
+            $('#main_naviguation').removeClass('touched');
+        } else {
+           $('#main_naviguation ul').show();
+           $('#main_naviguation span').hide();
+           $('#main_naviguation').css('background', 'highlight');
+           $('#main_naviguation').addClass('touched');
+        }
+    });
 });

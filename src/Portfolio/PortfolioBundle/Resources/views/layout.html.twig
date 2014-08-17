@@ -4,8 +4,6 @@
 
 {% block stylesheets %}
   <link rel="stylesheet" type="text/css" href="{{ asset('css/footer-icons.css')}}" />
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/menu_responsive_structure.css')}}" />
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/menu_css_responsive.css')}}" />
 {% endblock %}
 {% block scripts %}
   <script src="{{ asset('js/lib/modernizr.custom.js')}}"></script>
@@ -13,66 +11,16 @@
 {% endblock %}
 
 {% block menu %}
-  <nav id="mp-menu" class="mp-menu">
-    <div class="mp-level">
-      <h2 class="icon icon-world">Menu principal</h2>
-    <ul>
-    <li class="main-level"><a class="icon icon-photo" href="{{ path('portfolio_portfolio_homepage') }}">Accueil</a></li>
-    <li class="icon icon-arrow-left main-level">
-      <a class="icon icon-display" href="#">Présentation</a>
-      <div class="mp-level level-down">
-        <h2 class="icon icon-display">Présentation</h2>
-      <a class="mp-back" href="#">Retour</a>
-      <ul>
-        <li>
-          <a class="icon icon-phone" href="#">Histoire</a>
-        </li>
-        <li>
-          <a class="icon icon-tv" href="#">Expériences</a>
-        </li>
-        <li>
-          <a class="icon icon-camera" href="#">Compétences</a>
-        </li>
-        </ul>
-      </div>
-    </li>
-    <li class="icon icon-arrow-left main-level">
-      <a class="icon icon-news" href="#">Projets</a>
-      <div class="mp-level level-down">
-      <h2 class="icon icon-news">Projets</h2>
-      <a class="mp-back" href="#">Retour</a>
-      <ul>
-        <li><a href="#">Projets réalisés</a></li>
-        <li><a href="#">Projets envisagés</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="icon icon-arrow-left main-level">
-      <a class="icon icon-shop" href="#">Réseaux</a>
-      <div class="mp-level level-down">
-      <h2 class="icon icon-shop">Réseaux</h2>
-      <a class="mp-back" href="#">Retour</a>
-            <ul>
-        <li>
-          <a class="icon icon-phone" href="#">Linkdlin</a>
-        </li>
-        <li>
-          <a class="icon icon-tv" href="#">Viadéo</a>
-        </li>
-        <li>
-          <a class="icon icon-camera" href="#">Twitter</a>
-        </li>
-            <li>
-          <a class="icon icon-camera" href="#">Facebook</a>
-        </li>
-        </ul>
-      </div>
-    </li>
-      <li  class="main-level"><a class="icon icon-photo" href="#">CV</a></li>
-      <li  class="main-level"><a class="icon icon-photo" href="{{ path ('portfolio_portfolio_contact') }}">Contact</a></li>
-    </ul>
-  </div>
-  </nav>
+<nav id="main_naviguation">
+  <span>Menu</span>
+  <ul>
+    <li>Accueil</li>
+    <li>Présentation</li>
+    <li>Projets</li>
+    <li>Réseaux</li>
+    <li>Contact</li>
+  </ul>
+</nav>
 {% endblock %}
 {% block body %}
   {% if asset(message) %}
@@ -110,9 +58,5 @@
 {% endblock %}
 
 {% block javascripts %}
-  <script src="{{ asset('js/lib/classie.js')}}"></script>
-  <script src="{{ asset('js/lib/mlpushmenu.js')}}"></script>
-  <script>
-      new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
-  </script>
+  <!-- <script src="{{ asset('js/lib/classie.js')}}"></script>-->
 {% endblock %}
