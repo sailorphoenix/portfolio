@@ -108,8 +108,17 @@ function listRes(map, json) {
     });
 }
 
+var blocHomepage = function blocHomepage() {
+    if ($('body').width() < 681) {
+        $('#homepage-post').insertAfter("#homepage-cv");
+    } else {
+        $('#homepage-post').insertAfter("#homepage-actualite");
+    }
+};
+
 $(document).ready(function (){
     smoothScroll.init();
+    blocHomepage();
     //errorCaptcha();
     //geolocalisation();
     /*$("input#searchtown_search").geocomplete().bind("geocode:result", function(event, result){
@@ -154,3 +163,5 @@ $(document).ready(function (){
         }
     });
 });
+
+$(window).resize(blocHomepage);

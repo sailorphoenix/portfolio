@@ -1,3 +1,9 @@
+@media screen and (max-width: 960px) {
+    .hi-icon.hi-icon-facebook {
+      margin-left: 0;
+    }	
+}
+
 @media screen and (max-width: 800px) {
   #a-propos,
   #reseaux-sociaux,
@@ -15,7 +21,32 @@
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 680px) {
+    #homepage-post {
+      float: none;
+      width: 95%;
+    }
+
+    #homepage-travaux,
+    #homepage-cv {
+      width: 95%;
+    }
+
+    #homepage-actualite {
+      width: 95%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+  header a {
+    font-size: 1.2em;
+    padding: 20px;
+  }
+
+    header a span {
+      margin-left: 0;
+    }
+
   #a-propos,
   #reseaux-sociaux,
   #formulaire-contact {
@@ -37,6 +68,13 @@
   .main-content {
     display: inline-block;
     width: 85%;
+  }
+
+}
+
+@media screen and (max-width: 440px) {
+  header a {
+    padding: 10px;
   }
 
 }
