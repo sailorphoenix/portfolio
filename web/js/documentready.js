@@ -1,7 +1,7 @@
 function heightMenuRWD (){
-    var height = $('#main-content').height();
+    var height = $('#mp-pusher').height();
     // à tester
-    $('#trigger').height(height + 1);
+    $('#access-menu').height(height);
 }
 
 function errorCaptcha (){
@@ -19,13 +19,13 @@ function successCallback(position){
 function errorCallback(error){
     switch(error.code){
         case error.PERMISSION_DENIED:
-            $('#message').append("L'utilisateur n'a pas autorisé l'accès à sa position");
+            $('#message').append("Information : Vous n'avez pas autorisé la géolocalisation. Vous pourrez changer votre décision dans les paramètres de votre navigateur.");
         break;
         case error.POSITION_UNAVAILABLE:
-            $('#message').append("L'emplacement de l'utilisateur n'a pas pu être déterminé");
+            $('#message').append("Information :  Votre emplacement n'a pas pu être déterminé. Réessayez plus tard.");
         break;
         case error.TIMEOUT:
-            $('#message').append("Le service n'a pas répondu à temps");
+            $('#message').append("Information : Le service n'a pas répondu à temps. Réessayez plus tard.");
         break;
    }
 };
@@ -118,11 +118,11 @@ $(document).ready(function (){
     heightMenuRWD();
     smoothScroll.init();
     //errorCaptcha();
-    geolocalisation();
-    $("input#searchtown_search").geocomplete().bind("geocode:result", function(event, result){
+    //geolocalisation();
+    /*$("input#searchtown_search").geocomplete().bind("geocode:result", function(event, result){
         console.log(result.geometry.location.k);
         $('#search-form').attr('action', '/portfolio/web/app_dev.php/result/' + result.geometry.location.B + '/' + result.geometry.location.k);
-    });
+    });*/
 });
 
 $(window).resize(function () {

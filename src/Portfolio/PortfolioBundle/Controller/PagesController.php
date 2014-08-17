@@ -22,13 +22,27 @@ class PagesController extends Controller
       $request = $this->getRequest();
       $session = $request->getSession();
       $message = '';
-
-      $form = $this->contactForm();
+      $contact = new Contact();
+      $form = $this->createForm(new ContactType(), $contact);
       // récupère des messages
       foreach ($session->getFlashBag()->get('message', array()) as $mess) {
         $message = $mess;
       }
       return $this->render('PortfolioPortfolioBundle:Pages:index.html.twig', array('message' => $message, 'form' => $form->createView()));
+    }
+
+    public function contactAction()
+    {
+      $request = $this->getRequest();
+      $session = $request->getSession();
+      $message = '';
+    
+      $form = $this->contactForm();
+      // récupère des messages
+      foreach ($session->getFlashBag()->get('message', array()) as $mess) {
+        $message = $mess;
+      }
+      return $this->render('PortfolioPortfolioBundle:Pages:contact.html.twig', array('message' => $message, 'form' => $form->createView()));
     }
 
     public function gmapAction($longitude, $latitude)
@@ -76,16 +90,16 @@ class PagesController extends Controller
 
     public function searchtownForm()
     {
-    	//Récupération des informations du formulaire
-    	$request = $this->getRequest();
-    	$search = new Search();
-    	//Création du formulaire
-    	$form = $this->createForm(new SearchTownType(), $search);
-    	//Après l'envoi du formulaire on associe les informations du request avec les attributs de contact
-    	if('POST' == $request->getMethod()){
-    		$form->bind($request);
-    	}
-    	return $form;
+      //Récupération des informations du formulaire
+      $request = $this->getRequest();
+      $search = new Search();
+      //Création du formulaire
+      $form = $this->createForm(new SearchTownType(), $search);
+      //Après l'envoi du formulaire on associe les informations du request avec les attributs de contact
+      if('POST' == $request->getMethod()){
+        $form->bind($request);
+      }
+      return $form;
     }
 
     /**

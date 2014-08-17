@@ -16,8 +16,8 @@
   <nav id="mp-menu" class="mp-menu">
     <div class="mp-level">
       <h2 class="icon icon-world">Menu principal</h2>
-    <ul>            
-    <li class="main-level"><a class="icon icon-photo" href="{{ path('portfolio_portfolio_gmap') }}">Accueil</a></li>
+    <ul>
+    <li class="main-level"><a class="icon icon-photo" href="{{ path('portfolio_portfolio_homepage') }}">Accueil</a></li>
     <li class="icon icon-arrow-left main-level">
       <a class="icon icon-display" href="#">Présentation</a>
       <div class="mp-level level-down">
@@ -69,6 +69,7 @@
       </div>
     </li>
       <li  class="main-level"><a class="icon icon-photo" href="#">CV</a></li>
+      <li  class="main-level"><a class="icon icon-photo" href="{{ path ('portfolio_portfolio_contact') }}">Contact</a></li>
     </ul>
   </div>
   </nav>
@@ -99,18 +100,10 @@
       <a href="#" class="hi-icon hi-icon-linkedin">Linkdlin</a>
     </div>
     <div id="formulaire-contact">
-      <h3>Formulaire de contact</h3>
-        <form id="footer-contact-form" action="{{ path ('portfolio_portfolio_homepage') }}" method="post" {{ form_enctype(form) }}>
-          {{ form_errors(form) }}
-          {{ form_widget(form) }}
-          {{ form_row(form.nom) }}
-          {{ form_row(form.prenom) }}
-          {{ form_row(form.mail) }}
-          {{ form_row(form.objet) }}
-          {{ form_row(form.message) }}
-          {{ form_rest(form) }}
-          <input type="submit" value="Envoyer le message"/>
-        </form>
+      <a href="{{ path('portfolio_portfolio_contact') }}">
+        <h3>Formulaire de contact</h3>
+        <p>Vous pouvez également me contacter via le formulaire de contact du site. N'hésite plus! Une réponse est garantie dans les 48H!</p>
+      </a>
     </div>
     </div>
   </footer>

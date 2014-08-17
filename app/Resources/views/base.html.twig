@@ -16,18 +16,24 @@
 	{% block scripts %}{% endblock %}
   </head>
   <body>
-    <header>
-      <a href="#"></a>
-    </header>
     <div class="container">
       <!-- Push Wrapper -->
-	  <div class="mp-pusher" id="mp-pusher">
-	    <!-- mp-menu -->
+      <div id="background_all">
+      </div>
+      <div class="mp-pusher" id="mp-pusher">
+        <!-- mp-menu -->
         {% block menu %}{% endblock %}
-		<div class="scroller"><!-- this is for emulating position fixed of the nav -->
+        <div class="scroller"><!-- this is for emulating position fixed of the nav -->
           <div class="scroller-inner">
+            <div id="access-menu"><a href="#" id="trigger" class="menu-trigger"><span>Accès Menu</span></a></div>
+            <header>
+              <a href="{{ path('portfolio_portfolio_homepage') }}"><h1>Anaïs Hervouin</h1>
+                <span>
+                  Analyste et Développeuse WEB en technologie PHP
+                </span>
+              </a>
+            </header>
             <div id="main-content">
-              <div id="access-menu"><a href="#" id="trigger" class="menu-trigger"><span>Accès Menu</span></a></div>
               {% block body %}{% endblock %}
             </div>
             {% block footer %}{% endblock %}           

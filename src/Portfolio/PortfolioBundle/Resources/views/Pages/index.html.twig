@@ -4,16 +4,35 @@
 
 {% block title %}Accueil | Anais Hervouin Portfolio{% endblock %}
 
-{% block content %}	
-	<div id="homepage" class="main-content">
-	  <div class="homepage-rubrique" id="homepage-actualite">
-	    Actualités
-	  </div>
-	  <div class="homepage-rubrique" id="homepage-travaux">
-	    Travaux
-	  </div>
-	  <div class="homepage-rubrique" id="homepage-cv">
-	    CV
-	  </div>
-	</div> 
+{% block content %}
+    <div id="homepage" class="main-content">
+      <div class="homepage-rubrique" id="homepage-actualite">
+        <h2>Actualités</h2>
+        <img>
+        <div class="rubrique_contenu_actu">
+          Nouveau Portfolio en symfony 2.3!
+        </div>
+      </div>
+      <div class="homepage-rubrique" id="homepage-post">
+        <h2>Derniers posts sur les réseaux</h2>
+        <div class="rubrique_contenu_posts">
+          <p>Google +</p>
+          <p>Internet explorer THE faille détectée par le groupe DHJ.</p>
+        </div>
+      </div>
+      <div class="homepage-rubrique" id="homepage-travaux">
+        <h2>Travaux</h2>
+        <div class="rubrique_contenu_travaux">
+          <p>Projet Symfony pour le site truc du vide.</p>
+          <p>Tout nouveau projet pour ce fabuleux site!</p>
+        </div>
+      </div>
+      <div class="homepage-rubrique" id="homepage-cv">
+        <h2>CV</h2>
+        <div class="rubrique_contenu_cv">
+          <p>Nouveau poste:</p>
+          <p>Analyste développeur à CGI</p>
+        </div>
+      </div>
+    </div> 
 {% endblock %}

@@ -1,70 +1,4 @@
-@media screen and (min-width: 621px){
-	/** MENU **/
-.mp-level a {
-	color: #000;
-}
-.mp-level{
-	margin: 0 auto;
-	max-width: 980px;
-	box-shadow: 0 8px 12px #aaa;
-}
-
-#mp-menu {
-	border-bottom: 1px solid #000;
-	margin-bottom: 12px;
-}
-
-h2.icon-world {
-    display: none;
-}
-
-#mp-menu ul {
-    list-style-type: none;
-    height: 35px;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.mp-back {
-   display: none;
-}
-
-.mp-back,
-.level-down > h2.icon,
-.level-down ul {
-    display: none;
-}
-
-#access-menu span {
-	display: none;
-}
-
-#mp-menu .main-level {
-	width: 19%;
-	display: inline-block;
-	height: 35px;
-}
-
-#mp-menu a.icon {
-	display: block;
-	width: 100%;
-	text-align: center;
-	height: 35px;
-	line-height: 1.9;
-	text-transform: uppercase;
-}
-}
-
 @media screen and (max-width: 800px) {
-  #mp-menu a.icon {
-    font-size:  0.875em;
-    line-height: 2.3;
-  }
-
-  .homepage-rubrique {
-    width: 28%;
-    margin-right: 5%;
-  }
-  
   #a-propos,
   #reseaux-sociaux,
   #formulaire-contact {
@@ -82,19 +16,6 @@ h2.icon-world {
 }
 
 @media screen and (max-width: 620px) {
-  .homepage-rubrique {
-    width: 45%;
-    margin-right: 5%;
-  }
-  .homepage-rubrique#homepage-travaux {
-    margin-right: 0;
-  }
-
-  .homepage-rubrique#homepage-cv {
-    width: 96%;
-    margin-top: 5%;
-  }
-  
   #a-propos,
   #reseaux-sociaux,
   #formulaire-contact {
@@ -112,52 +33,10 @@ h2.icon-world {
   header a {
     border-bottom: none;
   }
-  
-  #access-menu {
-    display: inline-block;
-    width: 13%;
-    height: 100%;
-    vertical-align: top;
-    min-height: 300px;
-    background: #336CA6;
-  }
-  
+
   .main-content {
     display: inline-block;
     width: 85%;
   }
-    
-  .menu-trigger span {
-    -webkit-transform: rotate(-90deg); 
-    -moz-transform: rotate(-90deg);	
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-    display: inline-block;
-    width: 190px;
-    margin: 75px 0 0 -64px;
-    color: #fff;
-    font-family: 'Orbitron';
-    text-transform: uppercase;
-  }
-}
 
-@media screen and (max-width: 500px) {
-  .homepage-rubrique {
-    width: 100%;
-    display: block;
-    margin-right: 0;    
-    margin-top: 5%;
-  }
-  
-  .homepage-rubrique#homepage-actualite {
-    margin-top: 0;
-  }
-  
-  .homepage-rubrique#homepage-cv {
-    width: 100%;
-    margin-top: 5%;
-  }
-  
-  .menu-trigger:before {
-    width: 60%!important;
-  }
 }

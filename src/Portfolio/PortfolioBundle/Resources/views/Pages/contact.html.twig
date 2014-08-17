@@ -1,0 +1,17 @@
+{# src/Portfolio/PortfolioBundle/Resources/views/Pages/index.html.twig #}
+
+{% extends 'PortfolioPortfolioBundle::layout.html.twig' %}
+
+{% block title %}Contact | Anais Hervouin Portfolio{% endblock %}
+
+{% block content %}
+    <div id="formulaire_contact" class="main-content">
+      <h2>Formulaire de contact</h2>
+        <form id="footer-contact-form" action="{{ path ('portfolio_portfolio_contact') }}" method="post" {{ form_enctype(form) }}>
+          {{ form_errors(form) }}
+          {{ form_widget(form)}}
+          {{ form_row(form)}}
+          <input type="submit" value="Envoyer la demande"/>
+        </form>
+    </div> 
+{% endblock %}

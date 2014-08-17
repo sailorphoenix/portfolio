@@ -5,3 +5,9 @@ portfolio_portfolio_homepage:
 portfolio_portfolio_gmap:
     pattern:  /result/{longitude}/{latitude}
     defaults: { _controller: PortfolioPortfolioBundle:Pages:gmap, longitude : 2.350836, latitude : 48.857391}
+
+portfolio_portfolio_contact:
+    pattern:  /contact
+    defaults: { _controller: PortfolioPortfolioBundle:Pages:contact }
+    requirements:
+        _method: POST|GET

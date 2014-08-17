@@ -14,11 +14,36 @@ class ContactType extends AbstractType
 {
   public function buildForm(FormBuilderInterface $builder, array $options)
   {
-    $builder->add('nom','text');
-    $builder->add('prenom','text');
-    $builder->add('mail','email');
-    $builder->add('objet','text');
-    $builder->add('message','textarea');
+    $builder->add('nom','text', array(
+      'attr' => array(
+        'placeholder' => 'Nom:'
+      ),
+      'label' => 'Nom:'));
+
+    $builder->add('prenom','text', array(
+      'attr' => array(
+        'placeholder' => 'Prénom:'
+      ),
+      'label' => 'Prénom:'));
+
+    $builder->add('mail','email', array(
+      'attr' => array(
+        'placeholder' => 'Adresse mail:'
+      ),
+      'label' => 'Adresse mail:'));
+
+    $builder->add('objet','text', array(
+      'attr' => array(
+        'placeholder' => 'Objet:'
+      ),
+      'label' => 'Objet:'));
+
+    $builder->add('message','textarea', array(
+      'attr' => array(
+        'placeholder' => 'Message:'
+      ),
+      'label' => 'Message:'));
+
     $builder->add('captcha', 'captcha');
   }
   
