@@ -131,13 +131,13 @@ $(document).ready(function (){
         $('#main_naviguation').css('background', 'highlight');
     });
 
-    $('.no-touch #main_naviguation li').mouseover(function () {
+    $('.no-touch #main_naviguation li a').mouseover(function () {
         $(this).animate({
             width: "175px"
         }, 1000);
     });
 
-    $('.no-touch #main_naviguation li').mouseout(function () {
+    $('.no-touch #main_naviguation li a').mouseout(function () {
         $(this).animate({
             width: "80px"
         }, 1000);

@@ -76,7 +76,7 @@ header a span{
   min-height: 70%;
   border-left: 2px solid #000;
 }
-#homepage {
+.main-content {
     padding: 20px;
 }
 
@@ -171,16 +171,17 @@ footer .hi-icon {
     color: #fff;
 }
 
-#main_naviguation ul li {
+#main_naviguation ul li a{
     background: highlight;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #fff;
     border-left: 0;
     width: 80px;
+    display: block;
 }
 
-.no-touch #main_naviguation ul li:hover {
+.no-touch #main_naviguation ul li a:hover {
     background: #fff;
     color: highlight;
     border: 1px solid highlight;
@@ -200,3 +201,46 @@ footer .hi-icon {
     top: 10px;
     background: #4c605d url('../images/menu_access.png') no-repeat center bottom;
 }
+
+/**FORMULAIRE DE CONTACT **/
+#formulaire_contact form{
+    margin-top: 10px;
+}
+
+#formulaire_contact form #contact > div {
+    margin: 5px 0;
+}
+
+#formulaire_contact form label {
+    width: 105px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#formulaire_contact form input[type=text] {
+    width: 215px;
+}
+
+#formulaire_contact form input[type=email] {
+    width: 215px;
+}
+
+#formulaire_contact form textarea {
+    width: 365px;
+    height: 150px;
+}
+
+#formulaire_contact form img {
+    width: 215px;
+    height: auto;
+}
+
+#formulaire_contact form img + input {
+    display: block;
+    margin-left: 105px;
+}
+
+#formulaire_contact form input[type=submit] {
+    margin-left: 105px;
+}
+
